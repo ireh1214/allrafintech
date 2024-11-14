@@ -15,7 +15,7 @@ const markaziText = Markazi_Text({
   weight: '700',
 })
 
-export default function QuotesLayout({ children }: PropsWithChildren) {
+export default function QuotesLayout({ children }: PropsWithChildren<{}>) {
   return (
     <div>
       <header

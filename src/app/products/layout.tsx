@@ -13,7 +13,7 @@ const rubikMoonrocks = Rubik_Moonrocks({
   weight: '400',
   subsets: ['latin'],
 })
-export default function ProductLayout({ children }: PropsWithChildren) {
+export default function ProductLayout({ children }: PropsWithChildren<{}>) {
   return (
     <>
       <header>

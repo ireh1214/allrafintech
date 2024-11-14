@@ -6,7 +6,7 @@ import { getQueryClient } from '@/lib/tanstack-query/client'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { NuqsAdapter } from 'nuqs/adapters/next/app'
 
-export function Providers({ children }: PropsWithChildren) {
+export function Providers({ children }: PropsWithChildren<{}>) {
   return (
     <QueryClientProvider client={getQueryClient()}>
       <ReactQueryDevtools initialIsOpen={false} />
