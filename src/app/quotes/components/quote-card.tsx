@@ -17,9 +17,9 @@ export function QuoteCard({
   isFavorite,
   onFavorite,
   ...props
-}: QuoteCardProps & HTMLAttributes<HTMLDivElement>) {
+}: QuoteCardProps & HTMLAttributes<HTMLLIElement>) {
   return (
-    <main className={cn('relative p-5 border-b', className)} {...props}>
+    <li className={cn('relative p-5 border-b', className)} {...props}>
       <div className={'w-11/12'}>
         <p className={'text-xl italic text-primary'}>{quote}</p>
         <small className={'text-secondary'}>- {author}</small>
@@ -35,6 +35,6 @@ export function QuoteCard({
           <StarIcon fill={'transparent'} className={'text-gray-400'} />
         )}
       </Button>
-    </main>
+    </li>
   )
 }
