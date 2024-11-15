@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import { getProduct } from '@/actions/get-product'
-import { ProductDetail } from '@/schemas/product' // ProductDetail 타입 가져오기
+import { ProductDetail } from '@/schemas/product'
 
 export const useProduct = (id: string) => {
   return useQuery<ProductDetail>({
@@ -10,7 +10,7 @@ export const useProduct = (id: string) => {
       if (res.status === 'error') {
         throw new Error(res.error)
       }
-      return res.data // ProductDetail 타입으로 처리
+      return res.data
     },
   })
 }

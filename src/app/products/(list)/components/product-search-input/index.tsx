@@ -11,7 +11,9 @@ export function ProductSearchInput({
 }: HTMLAttributes<HTMLDivElement>) {
   const { term, handleTermChange } = useProductsSearchParams()
   const [searchTerm, setSearchTerm] = useState(term || '')
-  const [debounceTimeout, setDebounceTimeout] = useState<NodeJS.Timeout | null>(null)
+  const [debounceTimeout, setDebounceTimeout] = useState<NodeJS.Timeout | null>(
+    null
+  )
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value)
@@ -28,7 +30,7 @@ export function ProductSearchInput({
 
   useEffect(() => {
     if (term !== searchTerm) {
-      setSearchTerm(term) 
+      setSearchTerm(term)
     }
   }, [term])
 
